@@ -1,10 +1,13 @@
-on: push
-runs-on: self-hosted
-steps:
-- name: Install SSH Key
-  uses: shimataro/ssh-key-action@v2
-  with:
-    key: ${{ secrets.DEPLOYMENT_KEY }}
-    known_hosts: ${{ secrets.secrets.SSH_HOST }}
-- name: git pull from drb.aws.hubzero.org
-  run: ssh -i ~/.ssh/su-deployment-user_id_rsa su-deployment-user@drb.aws.hubzero.org "touch /var/www/drb/test.txt; date >> /var/www/drb/test.txt"
+name: staging-pull-on-push
+on: [push]
+jobs:
+  push-step-1:
+    runs-on: self-hosted
+    steps:
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.DEPLOYMENT_KEY }}
+        known_hosts: ${{ secrets.secrets.SSH_HOST }}
+    - name: git pull from drb.aws.hubzero.org
+      run: ssh -i ~/.ssh/su-deployment-user_id_rsa su-deployment-user@drb.aws.hubzero.org "touch /var/www/drb/test.txt; date >> /var/www/drb/test.txt"
