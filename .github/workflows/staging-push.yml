@@ -1,3 +1,4 @@
+on: push
 runs-on: self-hosted
 steps:
 - name: Install SSH Key
