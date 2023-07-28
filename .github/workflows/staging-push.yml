@@ -7,7 +7,7 @@ jobs:
     - name: Install SSH Key
       uses: shimataro/ssh-key-action@v2
       with:
-        key: ${{ secrets.DEPLOYMENT_KEY }}
-        known_hosts: ${{ secrets.SSH_HOST }}
+        key: ${{ secrets.SSH_KEY }}
+        known_hosts: ${{ secrets.SSH_HOSTS }}
     - name: git pull from drb.aws.hubzero.org
-      run: ssh -i ~/.ssh/su-deployment-user_id_rsa su-deployment-user@drb.aws.hubzero.org "touch /var/www/drb/test.txt; date >> /var/www/drb/test.txt"
+      run: ssh su-deployment-user@drb.aws.hubzero.org "touch /var/www/drb/test.txt; date >> /var/www/drb/test.txt"
