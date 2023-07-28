@@ -8,6 +8,6 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SSH_KEY }}
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        known_hosts: unnecessary
     - name: git pull from drb.aws.hubzero.org
       run: ssh su-deployment-user@drb.aws.hubzero.org "touch /var/www/drb/test.txt; date >> /var/www/drb/test.txt"
