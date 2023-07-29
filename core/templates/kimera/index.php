@@ -75,7 +75,7 @@ if ($this->getTitle() != Config::get('sitename'))
 							<jdoc:include type="modules" name="notices" />
 
 							<h1>
-							822 Test
+							837 Test
 							</h1>
 
 							<nav id="account" class="account-navigation">
