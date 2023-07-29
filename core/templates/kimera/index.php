@@ -75,9 +75,7 @@ if ($this->getTitle() != Config::get('sitename'))
 							<jdoc:include type="modules" name="notices" />
 
 							<h1>
-								<a href="<?php echo Request::root(); ?>" title="Test replacement">
-									<span>Did this work?</span>
-								</a>
+							808 Test
 							</h1>
 
 							<nav id="account" class="account-navigation">
