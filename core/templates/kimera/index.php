@@ -75,7 +75,7 @@ if ($this->getTitle() != Config::get('sitename'))
 							<jdoc:include type="modules" name="notices" />
 
 							<h1>
-								<a href="<?php echo Request::root(); ?>" title="<?php echo Config::get('sitename'); ?>">
+								<a href="<?php echo Request::root(); ?>" title="Test replacement">
 									<span><?php echo Config::get('sitename'); ?></span>
 								</a>
 							</h1>
