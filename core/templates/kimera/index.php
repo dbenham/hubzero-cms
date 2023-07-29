@@ -76,7 +76,7 @@ if ($this->getTitle() != Config::get('sitename'))
 
 							<h1>
 								<a href="<?php echo Request::root(); ?>" title="Test replacement">
-									<span><?php echo Config::get('sitename'); ?></span>
+									<span>Did this work?</span>
 								</a>
 							</h1>
 
